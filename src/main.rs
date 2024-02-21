@@ -1,34 +1,42 @@
-mod apple;
-mod ctx;
-mod game_object;
+mod food;
+mod game;
 mod player;
 
-use crate::game_object::GameObject;
-use std::thread::sleep;
-use std::time::{SystemTime, Duration};
+use game::Game;
+use extra::rand::Randomizer;
+use std::io::{stdout, Write};
+use termion::{async_stdin, clear, cursor, style};
+use termion::raw::IntoRawMode;
 
 fn main() {
-    let mut player = player::Player::new();
+    let stdout = stdout();
+    let mut stdout = stdout.lock().into_raw_mode().unwrap();
+    let stdin = async_stdin();
 
-    // let mut apple = apple::Apple::new();
+    write!(stdout, "{}{}", clear::All, cursor::Goto(1, 1)).unwrap();
+    stdout.flush().unwrap();
 
-    let mut ctx = ctx::Ctx::new(10, 10);
+    let mut game = Game {
+        width: 80,
+        height: 40,
+        stdin,
+        stdout,
+        player: player::Player::new(80, 40),
+        food: food::Food::new(80, 40),
+        score: 0,
+        speed: 0,
+        rand: Randomizer::new(0),
+    };
 
-    loop {
-        let current_time = SystemTime::now(); 
-        sleep(Duration::new(0, 160_000_000));
-        match current_time.elapsed() {
-            Ok(_elapsed) => {
-                // Update game objects
-                player.update(&ctx);
-                // apple.update(&ctx);
+    game.start();
 
-                // Render game objects
-                player.render(&mut ctx);
-                // apple.render(&mut ctx);
-                ctx.render();
-            }
-            Err(e) => println!("Error: {e:?}"),
-        }
-    }
+    write!(
+        game.stdout,
+        "{}{}{}",
+        clear::All,
+        style::Reset,
+        cursor::Goto(1, 1)
+    )
+    .unwrap();
+    game.stdout.flush().unwrap();
 }
