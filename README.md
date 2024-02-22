@@ -12,6 +12,8 @@ and only wrote code that was deemed necessary for the learning experience.
 
 ![output](https://github.com/Hereugo/rusty_snake_game/assets/60090566/f2eecdb1-c267-4202-b20f-e5a74b91c702)
 
+DISCLAIMER: THERE IS NO DANCING CAT IN THE SOURCE CODE
+
 ## Author
 
 - Amir Nurmukhambetov [github](https://github.com/Hereugo) 
