@@ -8,6 +8,10 @@ it was easy to implement the base of the game.
 As a side note: This is not a total ripoff of the snake game provided in the examples. I tried my best to not follow it, 
 and only wrote code that was deemed necessary for the learning experience.
 
+## Example
+
+![output](https://github.com/Hereugo/rusty_snake_game/assets/60090566/f2eecdb1-c267-4202-b20f-e5a74b91c702)
+
 ## Author
 
 - Amir Nurmukhambetov [github](https://github.com/Hereugo) 
