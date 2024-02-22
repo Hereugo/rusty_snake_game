@@ -9,10 +9,10 @@ As a side note: This is not a total ripoff of the snake game provided in the exa
 and only wrote code that was deemed necessary for the learning experience.
 
 ## Example
-
-![output](https://github.com/Hereugo/rusty_snake_game/assets/60090566/f2eecdb1-c267-4202-b20f-e5a74b91c702)
-
-DISCLAIMER: THERE IS NO DANCING CAT IN THE SOURCE CODE
+<p align="center">
+  <img src="https://github.com/Hereugo/rusty_snake_game/assets/60090566/f2eecdb1-c267-4202-b20f-e5a74b91c702" alt="Demo GIF"/>
+  <p align="center"><b>DISCLAIMER: THERE IS NO DANCING CAT IN THE SOURCE CODE</b></p>
+</p>
 
 ## Author
 
