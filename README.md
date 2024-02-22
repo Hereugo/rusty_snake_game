@@ -18,19 +18,6 @@ and only wrote code that was deemed necessary for the learning experience.
 
 - Amir Nurmukhambetov [github](https://github.com/Hereugo) 
 
-## TODO
-
-- [x] Create a struct Player. 
-  - [x] Movement functionality
-  - [x] Head coordinate
-  - [x] Body coordinates
-  - [x] Display method
-  - [x] Update method
-  - [x] Handle user input
-- [x] Randomly generated apple. 
-- [x] Create a game loop
-
-
 ## How to use:
 
 First, you'll want to check out this repository
